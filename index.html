@@ -239,6 +239,14 @@ Our experimental results demonstrate the efficient transfer of capabilities from
                 <h3>
                     Method
                 </h3>
+		<p class="text-justify">
+		To enable multimodal, multilingual prompting, compute efficiently and without multimodal downstream training data we use a custom modular encoder. 
+
+		The base of our encoder is a 13B autoregressive transformer (1.1), pretrained on 5 languages (English, German, Spanish, Italian and French)
+		We extend the encoder by an image prefix as well as adapters (1.2) to enable multimodality. Additionally, we finetuning the biases (2.1) of the LLM to provide embeddings, which capture the semantic meaning of 
+       		the text prompt, thus simplifying the learning of mapping from embeddings to image outputs. Finally, to align the pre-trained Stable Diffusion model (1.4) with the embeddings of our modular 
+       		encoder, we retrain the conditioning by finetuning the cross-attention weights (2.2). 
+		</p>
                 <image style='border:1px solid #000000' src="/img/architecture.png" class="img-responsive" alt="method"><br>
             </div>
         </div>
