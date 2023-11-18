@@ -200,22 +200,7 @@
                   </div>
                 </div>
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Citation
-                </h3>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <pre id="bibtex" readonly>
-@article{bellagente2023multifusion,
-      title={MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation}, 
-      author={Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
-      year={2023},
-      journal={arXiv preprint arXiv:2305.15296},
-}</pre>
-                </div>
-            </div>
-        </div>
+
         
         
         <div class="row">
@@ -240,14 +225,42 @@ Our experimental results demonstrate the efficient transfer of capabilities from
                     Method
                 </h3>
 		<p class="text-justify">
-		To enable multimodal, multilingual prompting, compute efficiently and without multimodal downstream training data we use a custom modular encoder. 
+		To enable multimodal, multilingual prompting, both compute efficiently and without multimodal downstream training data we use a custom modular encoder. 
 
-		The base of our encoder is a 13B autoregressive transformer (1.1), pretrained on 5 languages (English, German, Spanish, Italian and French)
-		We extend the encoder by an image prefix as well as adapters (1.2) to enable multimodality. Additionally, we finetuning the biases (2.1) of the LLM to provide embeddings, which capture the semantic meaning of 
+		The base of our encoder is a 13B autoregressive transformer (1.1), pretrained on 5 languages (English, German, Spanish, Italian and French).
+		We extend the encoder by an image prefix as well as adapters (1.2) to enable multimodality. Additionally, we finetune the biases (2.1) of the LLM to provide embeddings, which capture the semantic meaning of 
        		the text prompt, thus simplifying the learning of mapping from embeddings to image outputs. Finally, to align the pre-trained Stable Diffusion model (1.4) with the embeddings of our modular 
        		encoder, we retrain the conditioning by finetuning the cross-attention weights (2.2). 
 		</p>
                 <image style='border:1px solid #000000' src="/img/architecture.png" class="img-responsive" alt="method"><br>
+            </div>
+        </div>
+        
+	<div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Follow-Up Work
+                </h3>
+                <p> 
+                In order to contribute to the fair evaluation of large generative models we opened our model to be evaluated on the Holisitic Evaluation of Text-to-Image Models (HEIM) benchmark see the <a href="https://crfm.stanford.edu/heim/v1.1.0/">results</a> and <a href="https://arxiv.org/abs/2311.04287">paper</a> here.
+                </p>
+                </div>
+              </div>
+        
+                <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <pre id="bibtex" readonly>
+@article{bellagente2023multifusion,
+      title={MultiFusion: Fusing Pre-Trained Models for Multi-Lingual, Multi-Modal Image Generation}, 
+      author={Marco Bellagente and Manuel Brack and Hannah Teufel and Felix Friedrich and Björn Deiseroth and Constantin Eichenberg and Andrew Dai and Robert Baldock and Souradeep Nanda and Koen Oostermeijer and Andres Felipe Cruz-Salinas and Patrick Schramowski and Kristian Kersting and Samuel Weinbach},
+      year={2023},
+      journal={arXiv preprint arXiv:2305.15296},
+}</pre>
+                </div>
             </div>
         </div>
 
