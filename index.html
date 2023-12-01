@@ -246,8 +246,9 @@ Our experimental results demonstrate the efficient transfer of capabilities from
 		<h3>
 	        Evaluation
 	        </h3>
+		<p>In the following section we provide a concise overview of the quantitative and qualitative evaluation of MultiFusion.</p>
 		<h4>Image Fidelity and Text-to-Image Alignment</h4>
-		<p>We meassure image fidelity and image-text-alignment using the standard metrics FID-30K and Clip Scores. We find that MultiFusion prompted with text only performs on par with Stable Diffusion despite extension of the Encoder to support multiple languages and modalities.</p>
+		<p>First we meassure image fidelity and image-text-alignment using the standard metrics FID-30K and Clip Scores. We find that MultiFusion prompted with text only performs on par with Stable Diffusion despite extension of the Encoder to support multiple languages and modalities.</p>
 		<image src="https://Aleph-Alpha.github.io/MultiFusion/src/imgs/evaluation.png" class="img-responsive"><br>
 		<h4>Compositional Robustness</h4>
 		<div class="img_container">
@@ -255,7 +256,8 @@ Our experimental results demonstrate the efficient transfer of capabilities from
 			<image  height="150px" src="https://Aleph-Alpha.github.io/MultiFusion/src/imgs/compositional_robustness.png" alt="method"><br>
 		</div>
 		<div float="left">
-			<p>Image Composition is a known limitation of Diffusion Models. Through evaluation of our new benchmark <a href="https://huggingface.co/datasets/AIML-TUDA/MCC-250">MCC-250</a> we show that multimodal prompting leads to more compositional robustness as judged by humans.</p>
+			<p>Image Composition is a known limitation of Diffusion Models. Through evaluation of our new benchmark <a href="https://huggingface.co/datasets/AIML-TUDA/MCC-250">MCC-250</a> we show that multimodal prompting leads to more compositional robustness as judged by humans. Each prompt is a complex conjunction of two different objects with different
+			colors, with multimodal prompts containing one visual reference for each object interleaved with thetext input.  </p>
 		</div>
 		</div>
 		<h4>Multilinguality</h4>
